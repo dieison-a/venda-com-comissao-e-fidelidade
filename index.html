@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venda com comissão e fidelidade</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="card">
+        <h1>Registro de venda</h1>
+
+        <form action="calculaVenda.php" method="post">
+            <label for="valorInicial">Valor inicial da venda:</label>
+            <input type="number" name="valorInicial" id="valorInicial" min="0" step="0.01" required />
+            <label for="percentualComissao">Percentual de comissão do vendedor:</label>
+            <input type="number" name="percentualComissao" id="percentualComissao" min="0" step="0.01" required />
+
+            <p>Pagamento com cartão de fidelidade?</p>
+            <label><input type="radio" name="cartaoFidelidade" value="sim" checked /> Sim</label>
+            <label><input type="radio" name="cartaoFidelidade" value="nao" /> Não</label>
+
+            <button type="submit">Calcular</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </main>
+</body>
+
+</html>
